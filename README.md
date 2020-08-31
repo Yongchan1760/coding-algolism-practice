@@ -1,36 +1,29 @@
-# cod_test_830
+# cod_test_831
 코드 테스트 하루 한문제 풀기
-//배열 객체를 생성하고 그안에 5개의 숫자를 랜덤으로 저장 하고
+//2차원 배열에 값을 넣어 출력하시오
 package cod_test;
 
-public class Test_830 {
-	private static void Changhi(int[] input) {
-		int max = 0;
-		int min = 100;
-		int i;
-		for(i=0;i<input.length;i++) {
-			if(max<input[i]) {
-				max=input[i];
-			}
-		}
-		for(i=0;i<input.length;i++) {
-			if(min>input[i]) {
-				min=input[i];
-			}
-		}
-		System.out.println("최대값 max="+max+" "+"최소값 min="+min);
-	}
+import java.util.Scanner;
+
+public class Test_831 {
+
 	public static void main(String[] args) {
-		int [] input=new int[5];
-		//조심 객체 생성이아니라 배열 5개가 생긴것
-		System.out.println("무작위 정수 저장");
-		int i;
-		for(i=0;i<input.length;i++) {
-			input[i]=(int)(Math.random()*100); 
+		Scanner sc= new Scanner(System.in);
+		System.out.println("1행 1열과 1행 2열에 각각 저장될 정수를 입력하시오: ");
+		int [][]arr=new int[2][2];
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j <arr.length; j++) {
+				int input= sc.nextInt();
+				arr[i][j]=input;
+				System.out.println("arr["+i+"]["+j+"] :");
+			}
 		}
-		for(i=0;i<input.length;i++) {
-			System.out.println(input[i]);
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr.length; j++) {
+				System.out.print("arr["+i+"]["+j+"] :"+arr[i][j]+" , ");
+			}
+			System.out.println();
 		}
-		Changhi(input);
 	}
+
 }
