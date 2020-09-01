@@ -1,0 +1,27 @@
+//1~99 정수를 입력해 3,6,9 중에 하나가 있으면 박수짝 
+//두개가 있는 경우에는 박수짝짝을 출력하는 프로그램을 작성하시오
+package cod_test;
+
+import java.util.Scanner;
+
+public class T_test04 {
+
+	public static void main(String[] args) {
+		int cnt=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("정수를 입력하시오:");
+		int num=sc.nextInt();
+		int a1=num%10;//입력의 나머지
+		int a2=num/10;// 십의 자리 수 
+		if(a1%3==0 && a1!=0) cnt++; 
+		//30 입력시 0%0==0 이기에 0이 아니면 조건을 달지 않을시
+		// cnt++이되어 잘못된값이 출력된다.
+		if(a2%3==0 && a2!=0) cnt++;
+		if(cnt==2) 
+			System.out.println("박수짝짝");
+		else if(cnt==1) 
+			System.out.println("박수짝");
+		else
+			System.out.println("박수없음");
+	}
+}
