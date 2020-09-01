@@ -1,0 +1,27 @@
+// 정수를 입력받아 등급을 나누어 출력하는 프로그램
+package cod_test;
+
+import java.util.Scanner;
+
+public class T_test01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("점수를 입력하시오 :");
+		int input=sc.nextInt();
+		switch (input/10) {
+		case 10: case 9:
+			System.out.println("A B등급은 참잘하셨습니다.");
+			break;
+		case 8: case 7:
+			System.out.println("C D등급은 좀더 노력하세요.");
+			break;
+		case 6: case 5:
+			System.out.println("E F등급은 과락입니다.");
+			break;
+		}
+		
+	}
+
+}

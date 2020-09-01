@@ -1,0 +1,23 @@
+//두 점을 연결한 직사각형 (50,50) (100,100) 사이의 
+// 자표인지 판별하는 프로그램을 작성하시오
+package cod_test;
+
+import java.util.Scanner;
+
+public class T_test02 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("정수 x값 입력하시오 :");
+		int x =sc.nextInt();
+		System.out.println("정수 y값 입력하시오 :");
+		int y =sc.nextInt();
+		if((x>=50&&x<=100)&&(y>=50&&y<=100)) {
+			System.out.println("입력한 좌표가 사각형 안에 존재");
+		}
+		else {
+			System.out.println("좌표 밖의 값 입니다.");
+		}
+
+}
+}
