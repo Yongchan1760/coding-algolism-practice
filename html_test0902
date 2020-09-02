@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+		<!-- <h2>input type=""</h2> -->   <!--사용자가 편리하게 공간을 보여줌 서버에 정보를 전달-->
+			<h1>form</h1>
+		<p>
+			form은 사용자와 서버를 연결하는 페이지 부분을 구성한다. 예) 로그인을 하면 서버로 연결된다.<br>
+			사용자가 정보를 서버에 전달할떄 다양한 형태의 폼요소로 이루어진다. <br>
+			action 속성으로 정보를 전달 받을 서버측 파일을 지정하고 <br>
+			method 속성으로 정보 전달 방식을 지정한다. (일반적으로 속성값은 post를 지정)
+		</p>
+		
+		<form action="test.jsp" method="post">
+			<label for="nm">name</label>	<input type="text" id="nm">
+			<label for="b_day">생년월일</label>	<input type="text" id="b_day">
+			<input type="submit">
+		
+		
+			<h1>폼요소</h1>
+			<h2>input type="text" 한줄 글상자</h2>	
+		<p>
+		input상자에 대한 설명문구를  label태그로 표현한다. <br>
+		그리고 label 태그에는 for 속성의 값을 ,<br>
+		input 태그에는 속성의 값을 서로 일치 시켜주면 서로 연결이 된다.<br>
+		</p>
+			<label for="id">Id</label> <input type="text" id= ID maxlength="10">
+			<label for="pn">주민번호 앞자리</label> <input type="text" id="pn" maxlength="6" size="10">
+		<input type="submit">
+		
+		<ul>
+			<li>size="n" 상자의 길이</li>
+			<li>maxlength="n" 입력데이터 최대길이</li>
+			<li>minlength="n" 입력데이터 최소길이</li>
+		</ul>
+		
+		<h2>input type="password" 암호 글상자(주관식)</h2>
+			<label for="pw">비밀번호</label> <input type="password" id="pw" ><br>
+			<label for="pw">주민번호 뒷자리<input type="password" > </label> 
+		
+		<h2>큰 글상자 (주관식)</h2>
+		<h2>textarea .../textarea</h2>
+		<p>
+			row="n" 속성으로 상자의 줄을, <br>
+			cols="n" 속성으로 가로 길이(글자수)를 지정한다.
+		</p>
+			<textarea rows="7" cols="50">textarea 글상자</textarea>		
+	
+			<textarea rows="5" cols="70"></textarea>
+			
+		<h2>input type="radio" 단일 선택용 라디오 버튼(객관식)</h2>	
+		
+		<p>
+			단일 선택이 되게 하려면 같은 질문하의 라디오 버튼 항목들끼리는 name
+			 속성의 값을 서로 일치 시켜준다.<br>
+			 초기값으로 선택되어질 항목에는 checked 속성을 붙여준다.
+		</p>
+		
+			<p> 성별은?
+			<label> <input type="radio" name="gender" checked="checked"> male</label><br>
+			<label> <input type="radio" name="gender"> female</label><br>
+			<label> <input type="radio" name="gender"> other</label><br>
+			</p>	
+			
+			<p>코로나 19특별 지원금 대상자?<br>
+				<label><input type="radio" name="cob">네 대상자입니다.</label>
+				<label><input type="radio" name="cob">아니오.</label>
+			</p>
+			
+			
+			<h2>input type="checkbox" 다중 체크박스 선택용 (객관식)</h2>	
+				<p>
+				코로나 19 특별 지원금 수령 방법으로 선호하는 것은?(2가지 이상 선택 가능) <br>
+				<label><input type="checkbox">신용 카드 </label>
+				<label><input type="checkbox" checked>상품권 </label>
+				<label><input type="checkbox">현금</label>
+				</p>
+				
+				<h2> input type="file"</h2>
+				<label> 졸업 증명서 사본<input type="file"></label>
+				
+				<h2> input type="search" <small>검색용(삭제 표기 기능)</small></h2>
+				<input type="search">
+				
+				<h2> input type="hidden" 사용자 에게는 보이지 않는 데이터 전송용</h2>
+					<input type="hidden" value="silver">
+				
+				<h2>select 공간 절약 형 (객관식) 초기값으로 지정할 항목 지정 </h2>
+					<p>
+						복습이 필요한 과목은 ?<br>
+						<select>
+							<option>web</option>
+							<option>jsp</option>
+							<option>js</option>
+							<option>oracle</option>
+							<option>job</option>
+						</select>
+					</p>
+				
+				<p>
+				상담 희망 시간은? <br>
+					<select>
+						<option>9~10</option>
+						<option>10~11</option>
+						<option>11~12</option>
+						<option>12~1</option>
+						<option>1~2</option>
+						<option>2~3</option>
+					</select>
+				</p>
+				
+				
+				<p>
+				희망 회의 시간은 (복수 선택 가능) 다중선택 가능한 상자형으로 지정<br>
+					<select multiple="multiple">
+						<option> 1교시</option>
+						<option> 2교시</option>
+						<option> 3교시</option>
+						<option> 4교시</option>
+						<option> 5교시</option>
+						<option> 6교시</option>
+						<option> 7교시</option>
+						<option> 8교시</option>
+					</select>
+				</p>
+				
+				
+				
+				<h4>size= "n"으로 개 만큼 항목이 보이는 상자형으로 지정</h4>
+				<p>
+				희망 회의 시간은 <br>
+					<select size="5"><!--5칸 만 보임   -->
+						<option> 1교시</option>
+						<option> 2교시</option>
+						<option selected> 3교시</option> <!-- 초기값 지정 -->
+						<option> 4교시</option>
+						<option> 5교시</option>
+						<option> 6교시</option>
+						<option> 7교시</option>
+						<option> 8교시</option>
+					</select>
+				</p>
+				
+				
+				
+				<hr>
+				<h2>input type="submit"/ reset/ button" 전송/취소/일반버튼</h2>
+				
+			<p>
+				input type="submit"으로 전송용 버튼 생성<br>
+				<input type="submit" value="전송"><br>
+				input type="reset"으로 취소용 버튼 생성<br>
+				<input type="reset" value="취소"><br>
+				input type="button"으로 일반 버튼 생성<br>
+				<input type="button" value="click" onclick="alert( '누르지말자~~' )">
+				<h2> input type="image" 전송버튼 역할의 이미지</h2>
+					<p>src 속성으로 이미지의 경로를 지정함.<br>
+					width 속성으로 이미지의 가로 크기를<br>
+					height 속성으로 이미지의 세로 크기를 조절할수있다.<br> </P>
+				<input type="image" src="https://www.w3schools.com/tags/img_submit.gif" width="20" height="20">
+			<p>
+				<input type="image" src="https://www.w3schools.com/tags/img_submit.gif">
+			</p>
+		
+		<h2>>button..../ button</h2>
+		<p>시작과 종료태그 사이에 버튼의 글자를 넣어주고 , 기본 성격은 전송용이다.<br>
+		취소 기능을 원하면 type="reset"을 , 일반 버튼을 원하면 type="button" 을 준다.<br>
+		다른 태그가 올수 있어서 버튼안에 이미지를 넣거나 아이콘을 함께 표현할수있다.<br></p>
+		<button> SUbmi<b>t</b>></button>
+		<button type="reset"> <b>Reset</b>></button>
+		<button type="button" onclick="alert('또 눌렀냐~~')"> <i>button</i>></button>
+		
+		<button type="button"><img alt="submit" src="https://www.w3schools.com/tags/img_submit.gif">button</button>
+		</form>	
+</body>	
+</html>
